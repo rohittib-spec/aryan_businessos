@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "autoname": "JWR-.YYYY.-.#####",
+ "creation": "2026-06-24 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_work_challan",
+  "karigar",
+  "receipt_date",
+  "target_warehouse",
+  "is_final_receipt",
+  "issued_weight",
+  "received_weight",
+  "loss_weight",
+  "loss_pct",
+  "acceptable_loss_pct",
+  "loss_status",
+  "items",
+  "making_charge_amount",
+  "making_charge_paid",
+  "quality_checked",
+  "quality_remarks",
+  "huid_numbers",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "job_work_challan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Against Challan",
+   "options": "Job Work Challan",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "job_work_challan.karigar",
+   "fieldname": "karigar",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Karigar",
+   "options": "Karigar",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "receipt_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Receipt Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Receive Into Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_final_receipt",
+   "fieldtype": "Check",
+   "label": "Final Receipt (Close Challan)"
+  },
+  {
+   "fetch_from": "job_work_challan.total_issued_weight",
+   "fieldname": "issued_weight",
+   "fieldtype": "Float",
+   "label": "Total Issued Weight (g)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "received_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Received Weight (g)",
+   "precision": "3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "loss_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Loss (g)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "loss_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Loss %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "acceptable_loss_pct",
+   "fieldtype": "Percent",
+   "label": "Acceptable Loss %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "loss_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Loss Status",
+   "options": "\nWithin Limit\nExcess Loss",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items Received",
+   "options": "Job Work Receipt Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "making_charge_amount",
+   "fieldtype": "Currency",
+   "label": "Making Charge Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "making_charge_paid",
+   "fieldtype": "Check",
+   "label": "Making Charge Paid"
+  },
+  {
+   "default": "0",
+   "fieldname": "quality_checked",
+   "fieldtype": "Check",
+   "label": "Quality Checked"
+  },
+  {
+   "fieldname": "quality_remarks",
+   "fieldtype": "Small Text",
+   "label": "Quality Remarks"
+  },
+  {
+   "fieldname": "huid_numbers",
+   "fieldtype": "Small Text",
+   "label": "HUID Numbers"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-24 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Jewellery Manufacturing",
+ "name": "Job Work Receipt",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name",
+ "track_changes": 1
+}

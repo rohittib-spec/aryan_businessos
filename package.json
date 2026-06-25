@@ -1,0 +1,9 @@
+{
+  "name": "aryan_businessos",
+  "version": "1.0.0",
+  "description": "Aryan BusinessOS",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {}
+}

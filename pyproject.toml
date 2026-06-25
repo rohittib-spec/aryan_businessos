@@ -1,0 +1,8 @@
+[project]
+name = "aryan_businessos"
+version = "1.0.0"
+requires-python = ">=3.10"
+
+[tool.bench.dev-dependencies]
+frappe = ">=15.0.0"
+erpnext = ">=15.0.0"

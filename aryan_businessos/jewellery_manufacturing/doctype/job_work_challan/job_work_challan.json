@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "autoname": "JWC-.YYYY.-.#####",
+ "creation": "2026-06-24 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "karigar",
+  "challan_date",
+  "expected_return_date",
+  "status",
+  "work_order",
+  "design_ref",
+  "items",
+  "total_issued_weight",
+  "total_received_weight",
+  "net_loss_weight",
+  "loss_pct",
+  "loss_status",
+  "making_charge_type",
+  "making_charge_rate",
+  "making_charge_amount",
+  "instructions",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "karigar",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Karigar",
+   "options": "Karigar",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "challan_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Challan Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_return_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Return Date",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nOpen\nPartially Received\nClosed\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order"
+  },
+  {
+   "fieldname": "design_ref",
+   "fieldtype": "Data",
+   "label": "Design Reference / SKU"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items Issued",
+   "options": "Job Work Challan Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_issued_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Issued Weight (g)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_received_weight",
+   "fieldtype": "Float",
+   "label": "Total Received Weight (g)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_loss_weight",
+   "fieldtype": "Float",
+   "label": "Net Loss (g)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "loss_pct",
+   "fieldtype": "Percent",
+   "label": "Loss %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "loss_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Loss Status",
+   "options": "\nWithin Limit\nExcess Loss\nPending",
+   "read_only": 1
+  },
+  {
+   "default": "Per Gram",
+   "fieldname": "making_charge_type",
+   "fieldtype": "Select",
+   "label": "Making Charge Type",
+   "options": "Per Gram\nPer Piece\nFixed"
+  },
+  {
+   "fieldname": "making_charge_rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "making_charge_amount",
+   "fieldtype": "Currency",
+   "label": "Making Charge Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "instructions",
+   "fieldtype": "Small Text",
+   "label": "Instructions to Karigar"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-24 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Jewellery Manufacturing",
+ "name": "Job Work Challan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name",
+ "track_changes": 1
+}

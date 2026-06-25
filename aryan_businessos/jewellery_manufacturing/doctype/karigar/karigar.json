@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "autoname": "field:karigar_name",
+ "creation": "2026-06-24 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "karigar_name",
+  "karigar_code",
+  "karigar_type",
+  "status",
+  "experience_years",
+  "mobile",
+  "pan_number",
+  "making_charge_per_gram",
+  "loss_thresholds"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "karigar_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Karigar Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "karigar_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Karigar Code"
+  },
+  {
+   "fieldname": "karigar_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "In-House\nExternal / Freelance\nWorkshop",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nBlacklisted"
+  },
+  {
+   "fieldname": "experience_years",
+   "fieldtype": "Int",
+   "label": "Experience (Years)"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number"
+  },
+  {
+   "fieldname": "making_charge_per_gram",
+   "fieldtype": "Currency",
+   "label": "Default Making Charge (per gram)"
+  },
+  {
+   "fieldname": "loss_thresholds",
+   "fieldtype": "Table",
+   "label": "Loss Thresholds",
+   "options": "Karigar Loss Threshold"
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-24 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Jewellery Manufacturing",
+ "name": "Karigar",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "karigar_code,karigar_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "karigar_name",
+ "track_changes": 1
+}

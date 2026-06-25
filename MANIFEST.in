@@ -1,0 +1,16 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.txt
+include *.toml
+
+recursive-include aryan_businessos *.json
+recursive-include aryan_businessos *.csv
+recursive-include aryan_businessos *.html
+recursive-include aryan_businessos *.js
+recursive-include aryan_businessos *.css
+recursive-include aryan_businessos *.png
+recursive-include aryan_businessos *.svg
+recursive-include aryan_businessos *.ico
+recursive-include aryan_businessos *.py

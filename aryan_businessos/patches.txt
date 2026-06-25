@@ -1,0 +1,3 @@
+# Patches for Aryan BusinessOS
+# Format: app.module.patch_file
+# Example: aryan_businessos.patches.v1_0.setup_initial_data

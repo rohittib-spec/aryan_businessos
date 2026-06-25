@@ -1,0 +1,228 @@
+{
+ "actions": [],
+ "autoname": "TPE-.YYYY.-.#####",
+ "creation": "2026-06-25 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "production_order",
+  "customer",
+  "delivery_date",
+  "entry_date",
+  "shift",
+  "machine",
+  "mould",
+  "section_break_materials",
+  "materials",
+  "section_break_output",
+  "outputs",
+  "section_break_yield",
+  "total_input_kg",
+  "total_output_kg",
+  "bead_loss_kg",
+  "yield_pct",
+  "section_break_qc",
+  "qc_status",
+  "qc_reference",
+  "stock_entry",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "production_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Production Order",
+   "options": "Thermocole Production Order"
+  },
+  {
+   "fetch_from": "production_order.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "production_order.delivery_date",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "entry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Entry Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "\nDay\nNight"
+  },
+  {
+   "fieldname": "machine",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Machine",
+   "options": "Thermocole Machine"
+  },
+  {
+   "fieldname": "mould",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mould",
+   "options": "Thermocole Mould"
+  },
+  {
+   "fieldname": "section_break_materials",
+   "fieldtype": "Section Break",
+   "label": "Materials Consumed"
+  },
+  {
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "Materials",
+   "options": "Thermocole Production Entry Material",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_output",
+   "fieldtype": "Section Break",
+   "label": "Finished Output"
+  },
+  {
+   "fieldname": "outputs",
+   "fieldtype": "Table",
+   "label": "Outputs",
+   "options": "Thermocole Production Entry Output",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_yield",
+   "fieldtype": "Section Break",
+   "label": "Yield"
+  },
+  {
+   "fieldname": "total_input_kg",
+   "fieldtype": "Float",
+   "label": "Total Input (kg)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_output_kg",
+   "fieldtype": "Float",
+   "label": "Total Output (kg)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bead_loss_kg",
+   "fieldtype": "Float",
+   "label": "Bead Loss (kg)",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "yield_pct",
+   "fieldtype": "Percent",
+   "label": "Yield %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_qc",
+   "fieldtype": "Section Break",
+   "label": "Quality Control"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "qc_status",
+   "fieldtype": "Select",
+   "label": "QC Status",
+   "options": "Pending\nPassed\nFailed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qc_reference",
+   "fieldtype": "Link",
+   "label": "QC Reference",
+   "options": "Thermocole Quality Inspection",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Stock Entry",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-25 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Thermocole",
+ "name": "Thermocole Production Entry",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "autoname": "field:mould_name",
+ "creation": "2026-06-25 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "mould_name",
+  "mould_code",
+  "mould_type",
+  "status",
+  "length_mm",
+  "width_mm",
+  "height_mm",
+  "cavity_count",
+  "default_bead_item",
+  "steam_time_sec",
+  "cycle_time_min",
+  "default_machine",
+  "section_break_statistics",
+  "total_runs",
+  "avg_yield_pct",
+  "last_used_date"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "mould_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mould Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "mould_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mould Code"
+  },
+  {
+   "fieldname": "mould_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mould Type",
+   "options": "Block\nShape\nCustom",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "length_mm",
+   "fieldtype": "Float",
+   "label": "Length (mm)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "width_mm",
+   "fieldtype": "Float",
+   "label": "Width (mm)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "height_mm",
+   "fieldtype": "Float",
+   "label": "Height (mm)",
+   "precision": "2"
+  },
+  {
+   "default": "1",
+   "fieldname": "cavity_count",
+   "fieldtype": "Int",
+   "label": "Cavity Count"
+  },
+  {
+   "fieldname": "default_bead_item",
+   "fieldtype": "Link",
+   "label": "Default Bead Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "steam_time_sec",
+   "fieldtype": "Int",
+   "label": "Steam Time (sec)"
+  },
+  {
+   "fieldname": "cycle_time_min",
+   "fieldtype": "Float",
+   "label": "Cycle Time (min)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "default_machine",
+   "fieldtype": "Link",
+   "label": "Default Machine",
+   "options": "Thermocole Machine"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_statistics",
+   "fieldtype": "Section Break",
+   "label": "Statistics"
+  },
+  {
+   "fieldname": "total_runs",
+   "fieldtype": "Int",
+   "label": "Total Runs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "avg_yield_pct",
+   "fieldtype": "Percent",
+   "label": "Average Yield %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_used_date",
+   "fieldtype": "Date",
+   "label": "Last Used Date",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-25 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Thermocole",
+ "name": "Thermocole Mould",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "mould_code,mould_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "mould_name",
+ "track_changes": 1
+}

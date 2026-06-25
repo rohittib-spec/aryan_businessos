@@ -16,8 +16,8 @@ app_version = "1.0.0"
 # Fixtures — pre-load masters on install
 # ------------------------------------------------------------------
 fixtures = [
-    {"dt": "Custom Field", "filters": [["module", "=", "Jewellery Manufacturing"]]},
-    {"dt": "Property Setter", "filters": [["module", "=", "Jewellery Manufacturing"]]},
+    {"dt": "Custom Field", "filters": [["module", "in", ["Jewellery Manufacturing", "Thermocole"]]]},
+    {"dt": "Property Setter", "filters": [["module", "in", ["Jewellery Manufacturing", "Thermocole"]]]},
 ]
 
 # ------------------------------------------------------------------
@@ -43,6 +43,8 @@ scheduler_events = {
         "aryan_businessos.jewellery_manufacturing.tasks.alert_overdue_challans",
         # Alert when karigar loss % exceeds threshold
         "aryan_businessos.jewellery_manufacturing.tasks.alert_karigar_excess_loss",
+        # Alert on overdue thermocole production orders
+        "aryan_businessos.thermocole.tasks.alert_overdue_production_orders",
     ]
 }
 
